@@ -1,4 +1,16 @@
+# 로컬 환경 DB 설정
 spring:
-  datasource: hello
-  username: test
-  password: notpassword
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/serverTimezone=Asia/Seoul&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+
+--- 
+# 클라우드 환경 DB 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://클라우드 공개 IP:3306/serverTimezone=Asia/Seoul&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: 클라우드 DB User 이름
+    password: 클라우드 DB User 패스워드
